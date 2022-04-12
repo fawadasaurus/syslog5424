@@ -1,0 +1,52 @@
+{
+  "name": "syslog5424",
+  "types": {},
+  "components": {
+    "syslog5424": {
+      "name": "syslog5424",
+      "inputs": {
+        "input": {
+          "type": "struct"
+        }
+      },
+      "outputs": {
+        "severity": {
+          "type": "string"
+        },
+        "facility": {
+          "type": "string"
+        },
+        "version": {
+          "type": "i32"
+        },
+        "timestamp": {
+          "type": "u32"
+        },
+        "timestamp_nanos": {
+          "type": "u32"
+        },
+        "hostname": {
+          "type": "string"
+        },
+        "appname": {
+          "type": "string"
+        },
+        "procid": {
+          "type": "u16"
+        },
+        "procname": {
+          "type": "string"
+        },
+        "msgid": {
+          "type": "string"
+        },
+        "sd": {
+          "type": "struct"
+        },
+        "msg": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

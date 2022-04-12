@@ -1,0 +1,20 @@
+namespace "syslog5424"
+
+type Inputs {
+  input: struct
+}
+
+type Outputs {
+  severity: string,
+  facility: string,
+  version: i32,
+  timestamp: u32,
+  timestamp_nanos: u32,
+  hostname: string,
+  appname: string,
+  procid: u16,
+  procname: string,
+  msgid: string,
+  sd: struct,
+  msg: string
+}
