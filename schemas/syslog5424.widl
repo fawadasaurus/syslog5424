@@ -1,7 +1,7 @@
 namespace "syslog5424"
 
 type Inputs {
-  input: struct
+  message: struct
 }
 
 type Outputs {

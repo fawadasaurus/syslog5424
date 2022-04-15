@@ -91,22 +91,22 @@ pub mod generated {
 
         fn populate_inputs(payload: &IncomingPayload) -> Result<Inputs> {
             Ok(Inputs {
-                input: deserialize(payload.get("input")?)?,
+                message: deserialize(payload.get("message")?)?,
             })
         }
 
         impl From<Inputs> for TransportMap {
             fn from(inputs: Inputs) -> TransportMap {
                 let mut map = TransportMap::new();
-                map.insert("input", MessageTransport::success(&inputs.input));
+                map.insert("message", MessageTransport::success(&inputs.message));
                 map
             }
         }
 
         #[derive(Debug, serde::Deserialize, serde::Serialize, Clone)]
         pub struct Inputs {
-            #[serde(rename = "input")]
-            pub input: serde_json::Value,
+            #[serde(rename = "message")]
+            pub message: serde_json::Value,
         }
 
         #[derive(Debug)]

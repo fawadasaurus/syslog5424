@@ -5,7 +5,7 @@
     "syslog5424": {
       "name": "syslog5424",
       "inputs": {
-        "input": {
+        "message": {
           "type": "struct"
         }
       },
